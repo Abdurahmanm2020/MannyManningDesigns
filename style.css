@@ -1,3 +1,5 @@
+html { scroll-behavior: smooth; }
+
 @font-face {
     font-family: SolidText;
     src: url(assets/fonts/FONTSPRING-DEMO-INTEGRALCF-REGULAR.OTF);
@@ -62,6 +64,10 @@ header .container {
     align-items: center;
 }
 
+.navigation ul {
+    padding-left: 0;
+}
+
 .navigation ul li {
     display: inline-block;
     margin: 0 18px;
@@ -96,7 +102,7 @@ header .container {
 /***** BILLBOARD ******/
 
 #billboard {
-    padding-top: 150px;
+    padding-top: 140px;
     text-align: center;
     background-image: url('images/hero_bg.png');
     height: 75vh;
@@ -110,7 +116,7 @@ header .container {
 
 #billboard h1 {
     font-family: SolidTextBold;
-    font-size: 36px;
+    font-size: 46px;
 }
 
 .site-name {
@@ -153,12 +159,12 @@ header .container {
 }
 
 #scroller hr {
-    border: 1px solid #7abee1;
-    /*border: none;
-    height: 10px;
+    border: none;
+    height: 14px;
     margin: 0;
-    background-image: url(images/border-image.png);
-    background-size: 100%;*/
+    background-image: url('images/lines.png');
+    background-size: 100%;
+    background-repeat: no-repeat;
 }
 
 .scroller-images  {
@@ -275,9 +281,26 @@ header .container {
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
 }
+
+#live-work .fade-on {
+    left: 14%;
+}
   
 .port-item:hover .fade-on {
     opacity: 1;
+}
+
+p.port-text {
+    position: absolute;
+    bottom: 0;
+}
+
+.port-item:hover p.port-text {
+    position: absolute;
+    bottom: 0;
+    transition: .5s ease;
+    transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
 }
 
 /***** LIVE WORK *****/
@@ -285,6 +308,17 @@ header .container {
 #live-work {
     padding-top: 20px;
     padding-bottom: 50px;
+}
+
+#live-work h1 {
+    width: 80%;
+    margin: 0 auto;
+}
+
+#live-work .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
 }
 
 .port5 {
