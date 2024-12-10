@@ -134,10 +134,11 @@ header .container {
     margin-top: 15px;
 }
 
-.swap-text {
+#swap-text {
     font-family: DecorativeText;
     border: 2px dashed #fff;
     color: #7abee1;
+    letter-spacing: 5px;
     font-size: 56px;
     padding: 10px 20px;
     margin: 0 10px;
@@ -148,7 +149,7 @@ header .container {
 }
 
 .scroll-tab {
-    max-width: 80px;
+    max-width: 90px;
 }
 
 /**** SCROLLER *****/
