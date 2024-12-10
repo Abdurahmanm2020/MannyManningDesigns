@@ -65,7 +65,26 @@
                 <h1>Hi, Im<br>
                 <span class="highlight">Abdur Rahman Manning</span> ...</h1>
 
-                <h1>A <span class="swap-text">UI/UX</span> Designer</h1>
+                <h1>A <span id="swap-text">UI/UX</span> Designer</h1>
+
+                <script>
+                    var skills = ['UI/UX', 'Graphics', 'Apps', 'Logo', 'Product', 'Webflow'];
+            
+                    textSequence(0);
+                    function textSequence(i) {
+            
+                        if (skills.length > i) {
+                            setTimeout(function() {
+                                document.getElementById("swap-text").innerHTML = skills[i];
+                                textSequence(++i);
+                            }, 1000); 
+            
+                        } else if (skills.length == i) { 
+                            textSequence(0);
+                        }
+            
+                    }
+                </script>
 
                 <div class="align-bottom"><img class="scroll-tab" src="images/scroll_down.png" alt="Scroll down"></div>
 
