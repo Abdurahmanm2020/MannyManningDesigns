@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <link rel="stylesheet" href="style.css">
 
@@ -45,11 +46,38 @@
                     
                 </div><!-- end .navigation -->
 
-                <div class="button">
+                <div class="button reachout">
 
                     <a href="#contact"><button><span>Reach out</span></button></a>
                     
                 </div>
+
+                <div class="topnav">
+                    <a class="active"></a>
+                    <div id="mobile-menu">
+                        <a href="#billboard" class="small">Home</a>
+                        <a href="#portfolio">Work</a>
+                        <a href="#about-me">About Me</a>
+                        <a href="assets/AbdurRahman-Resume.pdf" target="_blank">Resume</a>
+                        
+                        <div class="button">
+                            <a href="#contact"><button><span>Reach out</span></button></a>
+                        </div>
+                    </div>
+                    <a href="javascript:void(0);" class="icon" onclick="mobileMenu()">
+                    <i class="fa fa-bars"></i>
+                    </a>
+                </div>
+                <script>
+                    function mobileMenu() {
+                        var x = document.getElementById("mobile-menu");
+                        if (x.style.display === "block") {
+                        x.style.display = "none";
+                        } else {
+                        x.style.display = "block";
+                        }
+                    }
+                </script>  
 
             </div><!-- end header .container -->
 
@@ -65,26 +93,7 @@
                 <h1>Hi, Im<br>
                 <span class="highlight">Abdur Rahman Manning</span> ...</h1>
 
-                <h1>A <span id="swap-text">UI/UX</span> Designer</h1>
-
-                <script>
-                    var skills = ['UI/UX', 'Graphics', 'Apps', 'Logo', 'Product', 'Webflow'];
-            
-                    textSequence(0);
-                    function textSequence(i) {
-            
-                        if (skills.length > i) {
-                            setTimeout(function() {
-                                document.getElementById("swap-text").innerHTML = skills[i];
-                                textSequence(++i);
-                            }, 1000); 
-            
-                        } else if (skills.length == i) { 
-                            textSequence(0);
-                        }
-            
-                    }
-                </script>
+                <h1 id="swap-box">A <span id="swap-text">UI/UX</span> Designer</h1>
 
                 <div class="align-bottom"><img class="scroll-tab" src="images/scroll_down.png" alt="Scroll down"></div>
 
