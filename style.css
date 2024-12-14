@@ -59,7 +59,7 @@ header {
 
 header .container {
     display: grid;
-    grid-template-columns: 1fr 6fr 1fr;
+    grid-template-columns: 2fr 10fr 2fr;
     justify-items: center;
     align-items: center;
 }
@@ -74,7 +74,8 @@ header .container {
     letter-spacing: 2px;
 }
 
-.navigation nav a {
+.navigation nav a,
+.topnav a {
     color: #fff;
     text-decoration: none;
     text-transform: uppercase;
@@ -99,6 +100,67 @@ header .container {
     padding: 10px 15px;
 }
 
+/***** MOBILE MENU *****/
+
+/* .mobile-container {
+    max-width: 480px;
+    margin: auto;
+    background-color: #555;
+    height: 500px;
+    color: white;
+    border-radius: 10px;
+  } */
+  
+.topnav {
+    overflow: hidden;
+    background-color: #000;
+    position: relative;
+    display: none;
+}
+
+.topnav #mobile-menu {
+    display: none;
+}
+
+.topnav a {
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    display: block;
+}
+
+.topnav a.icon {
+    background: black;
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.topnav a.icon:hover {
+    background-color: #ddd;
+}
+
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.active {
+    background-color: #000;
+    color: white;
+    height: 48px;
+}
+
+.topnav a.active:hover,
+.button a:hover {
+    background-color: #000;
+}
+
+.button a button:hover {
+    background-color: #ddd;
+}
 /***** BILLBOARD ******/
 
 #billboard {
@@ -232,6 +294,7 @@ header .container {
 .port-item p {
     text-transform: uppercase;
     font-family: SolidText;
+    letter-spacing: 2px;
 }
 
 #portfolio button {
@@ -531,4 +594,266 @@ footer .navigation {
 footer .navigation nav a {
     color: #000;
 }
+
+/***** MOBILE RESPONSIVE *****/
+
+@media only screen and (min-width: 1100px) {
+
+    .container {
+        width: 90%;
+    }
+
+    header .container {
+        grid-template-columns: 1fr 10fr 2fr;
+    }
+
+    .button button {
+        padding: 13px 2px;
+    }
+}
+
+@media only screen and (min-width: 900px) and (max-width: 1100px) {
+
+    .container {
+        width: 95%;
+    }
+
+    header .container {
+        grid-template-columns: 1fr 10fr 2fr;
+    }
+
+    #logo img {
+        max-height: 35px;
+    }
+
+    .navigation nav a {
+        font-size: 12px;
+    }
+    
+    .button button {
+        padding: 15px 5px;
+        font-size: 12px;
+    }
+
+    .port-item {
+        width: 320px;
+        height: 390px;
+    }
+
+    .samples {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+}
+
+@media only screen and (min-width: 768px) and (max-width: 900px) {
+
+    .container {
+        width: 98%;
+    }
+
+    header .container {
+        grid-template-columns: 2fr 10fr;
+    }
+
+    header .navigation,
+    .reachout {
+        display: none;
+    }
+
+    .topnav {
+        display: block;
+        width: 400px;
+        justify-self: end;
+        position: absolute;
+        top: 20px;
+    }
+
+    .port-item {
+        width: 250px;
+        height: 335px;
+    }
+
+    .fade-on {
+        opacity: 1;
+        position: absolute;
+        left: 34%
+    }
+    
+    #live-work .fade-on {
+        left: 22%;
+    }
+    
+    p.port-text {
+        position: absolute;
+        transform: translate(0, -30%);
+        font-size: 14px;
+    }
+
+    .samples {
+        grid-template-columns: 1fr 1fr;
+        justify-items: center;
+        gap: 50px;
+    }
+
+    .sample {
+        width: 300px;
+        height: 300px;
+    }
+
+    .sample-fade {
+        opacity: 1;
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
+        width: 300px;
+        height: 300px;
+    }
+}
+
+@media only screen and (min-width: 400px) and (max-width: 768px) {
+
+
+    header .container {
+        grid-template-columns: 2fr 10fr;
+        width: 90%;
+    }
+
+    header .navigation,
+    .reachout {
+        display: none;
+
+    }
+
+    .topnav {
+        display: block;
+        width: 300px;
+        justify-self: end;
+        position: absolute;
+        top: 30px;
+    }
+
+    
+
+    .topnav .small {
+        display: block;
+    }
+
+    #billboard h1 {
+        font-size: 32px;
+    }
+
+    .swap-box {
+        margin-top: 0;
+    }
+
+    #billboard .container {
+        width: 90%;
+    }
+
+    #portfolio .container,
+    #live-work .container {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+
+    .port-item {
+        width: 250px;
+        height: 335px;
+    }
+
+    .fade-on {
+        opacity: 1;
+        position: absolute;
+        left: 34%
+    }
+    
+    #live-work .fade-on {
+        left: 22%;
+    }
+    
+    p.port-text {
+        position: absolute;
+        transform: translate(0, -30%);
+        font-size: 14px;
+    }
+
+    #live-work h1 {
+        width: 85%;
+        text-align: center;
+    }
+
+    #about-me .container {
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+
+    #contact .container {
+        width: 90%;
+    }
+
+    #contact h1,
+    #work-samples h1 {
+        width: 100%;
+        text-align: center;
+        font-size: 95px;
+    }
+
+    #contact .button button {
+        padding: 5px 5px;
+    }
+
+    form button span {
+        width: 94%;
+    }
+
+    .samples {
+        grid-template-columns: 1fr;
+        justify-items: center;
+        gap: 50px;
+    }
+
+    .sample {
+        width: 300px;
+        height: 300px;
+    }
+
+    .sample-fade {
+        opacity: 1;
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
+        width: 300px;
+        height: 300px;
+    }
+
+    footer .navigation ul li {
+        margin-bottom: 30px;
+    }
+
+}
+
+
+@media only screen and (min-width: 400px) and (max-width: 600px) {
+    .topnav {
+        width: 200px;
+    }
+
+    #billboard .container {
+        width: 100%;
+    }
+
+    #swap-text {
+        font-size: 40px;
+    }
+
+    .decorative-heading,
+    #contact h1,
+    #work-samples h1    {
+        font-size: 80px;
+    }
+
+}
+
+
+
+
+
 
